@@ -2,13 +2,13 @@
 title: "Practical Machine Learning Course Notes"
 author: "Xing Su"
 output:
-  pdf_document:
-    toc: yes
-    toc_depth: 3
   html_document:
     highlight: pygments
     theme: spacelab
     toc: yes
+  pdf_document:
+    toc: yes
+    toc_depth: 3
 header-includes: \usepackage{graphicx} \usepackage{mathtools}
 ---
 
@@ -23,7 +23,7 @@ $\pagebreak$
 
 ```{r fig.width = 4, fig.height = 3, fig.align = 'center', echo = FALSE, message = FALSE}
 library(png);library(grid)
-library(doMC); registerDoMC(cores = 4)
+#library(doMC); registerDoMC(cores = 4)
 grid.raster(readPNG("figures/1.png"))
 ```
 
@@ -1003,7 +1003,7 @@ modFit <- train(Species ~ .,method="rpart",data=training)
 # print the classification tree
 print(modFit$finalModel)
 # plot the classification tree
-rattle::fancyRpartPlot(modFit$finalModel)
+#rattle::fancyRpartPlot(modFit$finalModel)
 # predict on test values
 predict(modFit,newdata=testing)
 ```
